@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
-  </head>
-  <body>
+		<script src="https://kit.fontawesome.com/9460207b39.js" crossorigin="anonymous"></script>		<body>
     <header>
       <h1>Figuras Geometricas</h1>
       <p>
@@ -15,29 +13,45 @@
         figuras geometricas basicas.
       </p>
     </header>
-    <section>
-      <div class="prueba">
+    <section class="figuras">
+      <div class="figura_box cuadrado">
         <img src="Assets/Images/Cuadrado.png" alt="" />
-        <div>Cuadrado</div>
-        <div>
+        <p class="title">Cuadrado</p>
+        <p class="descripcion">
           Un cuadrado es una figura geométrica plana que consiste en cuatro
           puntos unidos por segmentos de igual medida
-        </div>
+        </p>
+				<div>
+					<p>Calculemos</p>
+				</div>
+				<div class="values">
+					<div class="value_box">
+						<span><i class="fas fa-arrows-alt-h"></i></i></span>
+						<input type="number" max="999" min="1">
+					</div>
+					<div class="value_box">
+						<span><i class="fas fa-arrows-alt-v"></i></span>
+						<input  id="fuel"  type="number" max="999" min="1" low="33">
+					</div>
+				</div>
+				<div>
+					<button type="submit">Calcular</button>
+				</div>
       </div>
-      <div class="prueba">
+      <div class="figura_box">
         <img src="Assets/Images/Triangulo.png" alt="" />
-        <div>Triangulo</div>
-        <div>
+        <p class="title">Triangulo</p>
+        <p class="descripcion">
           se llama triángulo, trígono o trigonoide al polígono de tres lados
-        </div>
+        </p>
       </div>
-      <div class="prueba">
+      <div class="figura_box">
         <img src="Assets/Images/Circulo.png" alt="" />
-        <div>Circulo</div>
-        <div>
+        <p class="title">Circulo</p>
+        <p class="descripcion">
           El círculo es una región del plano delimitada por una circunferencia
           y, por tanto, tiene asociada un área.
-        </div>
+        </p>
       </div>
     </section>
     <script src="figura.js"></script>
