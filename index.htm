@@ -26,24 +26,42 @@
 				</div>
 				<div class="values">
 					<div class="value_box">
-						<span><i class="fas fa-arrows-alt-h"></i></i></span>
-						<input type="number" max="999" min="1">
+						<span><i class="fas fa-arrows-alt"></i></i></span>
+						<input id="lado" type="number" max="999" min="1">
 					</div>
-					<div class="value_box">
-						<span><i class="fas fa-arrows-alt-v"></i></span>
-						<input  id="fuel"  type="number" max="999" min="1" low="33">
-					</div>
+					<p>Dame las medidas de los lados de tu cuadrado</p>
 				</div>
 				<div>
-					<button type="submit">Calcular</button>
+					<button type="submit" onclick="calcularCuadrado()" >Calcular</button>
+				</div>
+				<div>
+					<div><span>Lados</span><span id="lados"> </span></div>
+					<div><span>Area</span><span id="area"></span></div>
+					<div><span>Perimetro</span><span id="perimetro"></span></div>
+
 				</div>
       </div>
-      <div class="figura_box">
+      <div class="figura_box triangulo">
         <img src="Assets/Images/Triangulo.png" alt="" />
         <p class="title">Triangulo</p>
         <p class="descripcion">
           se llama triángulo, trígono o trigonoide al polígono de tres lados
         </p>
+				<div class="values">
+					<div class="value_box">
+						<span><i class="fas fa-arrows-alt"></i></i></span>
+						<input id="ladoLeft" type="number" max="999" min="1">
+					</div>
+					<div class="value_box">
+						<span><i class="fas fa-arrows-alt"></i></i></span>
+						<input id="ladoRight" type="number" max="999" min="1">
+					</div>
+					<div class="value_box">
+						<span><i class="fas fa-arrows-alt"></i></i></span>
+						<input id="Base" type="number" max="999" min="1">
+					</div>
+					<p>Dame las medidas de los lados de tu cuadrado</p>
+				</div>
       </div>
       <div class="figura_box">
         <img src="Assets/Images/Circulo.png" alt="" />

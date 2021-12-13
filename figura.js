@@ -1,13 +1,28 @@
-console.group("cuadrado");
 const ladoCuadrado = (lado) => lado;
-console.log(`Los lados del cuadrado miden: ${ladoCuadrado(2)}cm`);
-
 const perimetroCuadrado = (lado) => lado * 4;
-console.log(`El perimetro del cuadrado es: ${perimetroCuadrado(5)}cm`);
-
 const areaCuadrado = (lado) => lado * lado;
-console.log(`El area del cuadrado es: ${areaCuadrado(10)} cm^2`);
-console.groupEnd();
+
+const calcularCuadrado = () => {
+  const lado = document.getElementById("lado").value;
+
+  const area = document.getElementById("area");
+  const lados = document.getElementById("lados");
+  const perimetro = document.getElementById("perimetro");
+
+  lados.innerHTML = `${ladoCuadrado(lado)} cm`;
+  area.innerHTML = `${areaCuadrado(lado)} cm`;
+  perimetro.innerHTML = `${perimetroCuadrado(lado)} cm`;
+};
+
+// Calculos Triangulos
+
+const calcularTriangulo = () => {
+	console.log('Clic en el tringulo');
+	
+	const ladoLeft = document.getElementById('');
+	const ladoRight = document.getElementById('');
+	const ladoTop = document.getElementById('');
+}
 
 console.group("Triangulos");
 const ladoBaseTringulo = (lado1, lado2, base) => {
