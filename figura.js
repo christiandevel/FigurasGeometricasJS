@@ -15,31 +15,55 @@ const calcularCuadrado = () => {
 };
 
 // Calculos Triangulos
-
-const calcularTriangulo = () => {
-	console.log('Clic en el tringulo');
-	
-	const ladoLeft = document.getElementById('');
-	const ladoRight = document.getElementById('');
-	const ladoTop = document.getElementById('');
-}
-
-console.group("Triangulos");
-const ladoBaseTringulo = (lado1, lado2, base) => {
-  return console.log(
-    `Los lados del triangulo son ${lado1} y ${lado2} cm. la base es de ${base} cm`
-  );
+const cAlturaTriangulo = (ladoLeft, ladoRight, ladoBase) => {
+  let altura;
+  let base = ladoBase / 2;
+  if (ladoLeft === ladoRight) {
+    altura = ladoLeft * ladoLeft - base * base;
+  } else {
+    if (ladoLeft > ladoRight) {
+      altura = ladoLeft * ladoLeft - (ladoBase * ladoBase) / 2;
+    } else {
+      altura = ladoRight * ladoRight - (ladoBase * ladoBase) / 2;
+    }
+  }
+  return Math.sqrt(altura);
 };
-ladoBaseTringulo(2, 2, 5);
 
-const alturaTriangulo = (altura) => altura;
-console.log(`La altura del tringulo es de ${alturaTriangulo(2)} cm`);
-
-const perimetroTriangulo = (lado1, lado2, base) => lado1 + lado2 + base;
-console.log(`El perimetro del triangulo es ${perimetroTriangulo(3, 5, 10)}`);
+const cPerimetroTriangulo = (lado1, lado2, base) => {
+  let perimetro = parseInt(lado1) + parseInt(lado2) + parseInt(base);
+  return perimetro;
+};
 
 const areaTringulo = (base, altura) => (base * altura) / 2;
-console.log(`El area del triangulo es ${areaTringulo(10, 5)}`);
+const calcularTriangulo = () => {
+
+  const ladoLeft = document.getElementById("ladoLeft").value;
+  const ladoRight = document.getElementById("ladoRight").value;
+  const ladoBase = document.getElementById("ladoBase").value;
+
+  const ladosTriangulo = document.getElementById("ladosTriangulo");
+  const alturaTriangulo = document.getElementById("alturaTriangulo");
+  const perimetroTriangulo = document.getElementById("perimetroTriangulo");
+  const areaTriangulo = document.getElementById("areaTriangulo");
+
+  ladosTriangulo.innerHTML = `${ladoLeft} ${ladoRight} ${ladoBase}`;
+  alturaTriangulo.innerHTML = `${cAlturaTriangulo(
+    ladoLeft,
+    ladoRight,
+    ladoBase
+  )} cm`;
+  perimetroTriangulo.innerHTML = `${cPerimetroTriangulo(
+    ladoLeft,
+    ladoRight,
+    ladoBase
+  )} cm`;
+  areaTriangulo.innerHTML = `${areaTringulo(
+    ladoBase,
+    cAlturaTriangulo(ladoLeft, ladoRight, ladoBase)
+  )} cm`;
+};
+
 console.groupEnd();
 
 console.group("circulo");

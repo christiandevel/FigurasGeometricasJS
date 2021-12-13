@@ -49,18 +49,27 @@
         </p>
 				<div class="values">
 					<div class="value_box">
-						<span><i class="fas fa-arrows-alt"></i></i></span>
+						<span><i class="fas fa-arrows-alt-h"></i></span>
 						<input id="ladoLeft" type="number" max="999" min="1">
 					</div>
 					<div class="value_box">
-						<span><i class="fas fa-arrows-alt"></i></i></span>
+						<span><i class="fas fa-share"></i></span>
 						<input id="ladoRight" type="number" max="999" min="1">
 					</div>
 					<div class="value_box">
-						<span><i class="fas fa-arrows-alt"></i></i></span>
-						<input id="Base" type="number" max="999" min="1">
+						<span><i class="fas fa-reply"></i></span>
+						<input id="ladoBase" type="number" max="999" min="1">
 					</div>
-					<p>Dame las medidas de los lados de tu cuadrado</p>
+					<p>Dame las medidas de los lados de tu triangulo</p>
+					<div>
+						<button onclick="calcularTriangulo()">Calcular</button>
+					</div>
+				</div>
+				<div>
+					<span>Las Medidas Entregadas</span><span id="ladosTriangulo"></span>
+					<span>La altura del Triangulo</span><span id="alturaTriangulo"></span>
+					<span>El perimetro del triangulo</span><span id="perimetroTriangulo"></span>
+					<span>El area del triangulo</span><span id="areaTriangulo"></span>
 				</div>
       </div>
       <div class="figura_box">
