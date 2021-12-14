@@ -64,21 +64,29 @@ const calcularTriangulo = () => {
   )} cm`;
 };
 
-console.groupEnd();
-
-console.group("circulo");
-const PI = Math.PI;
-console.log(`PI es igual a ${PI} `);
-
-const radioCirculo = (radio) => radio;
-console.log(`El radio del circulo es ${radioCirculo(2)}`);
-
+const cRadioCirculo = (diametro) => diametro/2;
 const diametroCirculo = (radio) => radio * 2;
-console.log(`El diametro del circulo es ${diametroCirculo(2)}`);
+const cPerimetroCirculo = (diametro, PI) => diametro*PI;
+const cAreaCirculo = (radio, PI) => radio * radio * PI;
 
-const perimetroCirculo = (diametro) => diametro * PI;
-console.log(`El perimetro del circulo es ${perimetroCirculo(2)}`);
+const calculosCirculo = () => {
+	const PI = Math.PI;
+	const diametro = document.getElementById("diametro").value;
+	
+	const diametroCirculo = document.getElementById("diametroCirculo");
+	const valorPI = document.getElementById("valorPI");
+	const radioCirculo = document.getElementById("radioCirculo");
+	const perimetroCirculo = document.getElementById("perimetroCirculo");
+	const areaCirculo = document.getElementById("areaCirculo");
+	
+	
+	diametroCirculo.innerHTML = `${diametro}`;
+	valorPI.innerHTML = `${PI}`;
+	radioCirculo.innerHTML = `${cRadioCirculo(diametro)}`;
+	perimetroCirculo.innerHTML = `${cPerimetroCirculo(diametro, PI)}`;
+	areaCirculo.innerHTML = `${cAreaCirculo(cRadioCirculo(diametro), PI)}`;
+}
 
-const areaCirculo = (radio) => radio * radio * PI;
-console.log(`El area del circulo es ${areaCirculo(2)}`);
-console.groupEnd();
+
+
+
