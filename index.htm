@@ -4,100 +4,108 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="style.css" />
-		<script src="https://kit.fontawesome.com/9460207b39.js" crossorigin="anonymous"></script>		<body>
-    <header>
+
+    <!-- Libreria para iconos -->
+    <script
+      src="https://kit.fontawesome.com/9460207b39.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Figuras Geometricas</title>
+  </head>
+  <body>
+    <main>
       <h1>Figuras Geometricas</h1>
       <p>
-        Vamos a calcular las diferentes variables que podemos encontrar en las
-        figuras geometricas basicas.
+        Vamos a realizar diferentes calculos con las figuras Geometricas
+        Basicas.
       </p>
-    </header>
+    </main>
     <section class="figuras">
-      <div class="figura_box cuadrado">
+      <div class="figura_container cuadrado">
         <img src="Assets/Images/Cuadrado.png" alt="" />
-        <p class="title">Cuadrado</p>
-        <p class="descripcion">
-          Un cuadrado es una figura geométrica plana que consiste en cuatro
-          puntos unidos por segmentos de igual medida
-        </p>
+        <div class="descripcion">
+          <p>
+            Un cuadrado es una figura geométrica plana que consiste en cuatro
+            puntos unidos por segmentos de igual medida
+          </p>
+        </div>
+				<p class="title">Calculemos</p>
 				<div>
-					<p>Calculemos</p>
-				</div>
-				<div class="values">
-					<div class="value_box">
-						<span><i class="fas fa-arrows-alt"></i></i></span>
-						<input id="lado" type="number" max="999" min="1">
-					</div>
-					<p>Dame las medidas de los lados de tu cuadrado</p>
+					<label for="lado">Dame la medidas de los lados de tu cuadrado</label>
+					<span><i class="fas fa-arrows-alt"></i></i></span>
+					<input id="lado" type="number" max="999" min="1">
 				</div>
 				<div>
 					<button type="submit" onclick="calcularCuadrado()" >Calcular</button>
 				</div>
-				<div>
-					<div><span>Lados</span><span id="lados"> </span></div>
-					<div><span>Area</span><span id="area"></span></div>
-					<div><span>Perimetro</span><span id="perimetro"></span></div>
-
+				<div class="results">
+					<span class="title_media">La medida de los lados de tu cuadrado son de</span><span id="lados" class="valor_medida"> </span>
+					<span class="title_media">El area de tu cuadrado es de</span><span id="area" class="valor_medida"></span>
+					<span class="title_media">El perimetro de tu cuadrado es de</span><span id="perimetro" class="valor_medida"></span>
 				</div>
       </div>
-      <div class="figura_box triangulo">
+			<div class="figura_container cuadrado">
         <img src="Assets/Images/Triangulo.png" alt="" />
-        <p class="title">Triangulo</p>
-        <p class="descripcion">
-          se llama triángulo, trígono o trigonoide al polígono de tres lados
-        </p>
-				<div class="values">
-					<div class="value_box">
-						<span><i class="fas fa-arrows-alt-h"></i></span>
-						<input id="ladoLeft" type="number" max="999" min="1">
-					</div>
-					<div class="value_box">
-						<span><i class="fas fa-share"></i></span>
-						<input id="ladoRight" type="number" max="999" min="1">
-					</div>
-					<div class="value_box">
-						<span><i class="fas fa-reply"></i></span>
-						<input id="ladoBase" type="number" max="999" min="1">
-					</div>
-					<p>Dame las medidas de los lados de tu triangulo</p>
-					<div>
-						<button onclick="calcularTriangulo()">Calcular</button>
-					</div>
+        <div class="descripcion">
+          <p>
+						Se llama triángulo, trígono o trigonoide al polígono de tres lados
+          </p>
+        </div>
+				<p class="title">Calculemos</p>
+				<div>
+					<label for="lado">Dame la medidas de la base de tu rectagunlo</label>
+					<span><i class="fas fa-arrows-alt-h"></i></span>
+					<input id="ladoLeft" type="number" max="999" min="1">
 				</div>
 				<div>
-					<span>Las Medidas Entregadas</span><span id="ladosTriangulo"></span>
-					<span>La altura del Triangulo</span><span id="alturaTriangulo"></span>
-					<span>El perimetro del triangulo</span><span id="perimetroTriangulo"></span>
-					<span>El area del triangulo</span><span id="areaTriangulo"></span>
+					<label for="lado">Lado Izquierdo de tu rectagunlo</label>
+					<span><i class="fas fa-share"></i></span>
+					<input id="ladoRight" type="number" max="999" min="1">
+				</div>
+				<div>
+					<label for="lado">Lado Derecho de tu rectagunlo</label>
+					<span><i class="fas fa-reply"></i></span>
+					<input id="ladoBase" type="number" max="999" min="1">
+				</div>
+				<div>
+					<button type="submit" onclick="calcularTriangulo()" >Calcular</button>
+				</div>
+				<div class="results">
+					<span class="title_media">La medidas de tu rectangulo son</span><span id="ladosTriangulo" class="valor_medida"> </span>
+					<span class="title_media">La altura del Triangulo es</span><span id="alturaTriangulo" class="valor_medida"></span>
+					<span class="title_media">El perimetro del triangulo es</span><span id="perimetroTriangulo" class="valor_medida"></span>
+					<span class="title_media">El area del triangulo es</span><span id="areaTriangulo" class="valor_medida"></span>
 				</div>
       </div>
-      <div class="figura_box">
+			<div class="figura_container cuadrado">
         <img src="Assets/Images/Circulo.png" alt="" />
-        <p class="title">Circulo</p>
-        <p class="descripcion">
-          El círculo es una región del plano delimitada por una circunferencia
-          y, por tanto, tiene asociada un área.
-        </p>
+        <div class="descripcion">
+          <p>
+						El círculo es una región del plano delimitada por una circunferencia
+						y, por tanto, tiene asociada un área.
+          </p>
+        </div>
+				<p class="title">Calculemos</p>
 				<div>
-					<p>Dame las medida de tu circulo</p>
-				</div>
-				<div class="value_box">
+					<label for="lado">Dame el diametro de tu circulo</label>
 					<span><i class="fas fa-reply"></i></span>
 					<input id="diametro" type="number" max="999" min="1">
 				</div>
 				<div>
-					<button onclick="calculosCirculo()">Calcular</button>
+					<button type="submit" onclick="calculosCirculo()" >Calcular</button>
 				</div>
-				<div>
-					<span>El diametro es </span><span id="diametroCirculo"></span>
-					<span>El valor de pi es</span><span id="valorPI"></span>
-					<span>El radio del circulo es</span><span id="radioCirculo"></span>
-					<span>El perimetro del circulo es</span><span id="perimetroCirculo"></span>
-					<span>El area del circulo es</span><span id="areaCirculo"></span>
+				<div class="results">
+					<span class="title_media">El diametro es</span><span id="diametroCirculo" class="valor_medida"> </span>
+					<span class="title_media">El valor de pi e</span><span id="valorPI" class="valor_medida"> </span>
+					<span class="title_media">El radio del circulo es</span><span id="radioCirculo" class="valor_medida"></span>
+					<span class="title_media">El perimetro del circulo es</span><span id="perimetroCirculo" class="valor_medida"></span>
+					<span class="title_media">El area del circulo es</span><span id="areaCirculo" class="valor_medida"></span>
 				</div>
       </div>
     </section>
-    <script src="figura.js"></script>
+		<script src="figura.js"></script>
   </body>
 </html>

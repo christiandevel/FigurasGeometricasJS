@@ -9,9 +9,9 @@ const calcularCuadrado = () => {
   const lados = document.getElementById("lados");
   const perimetro = document.getElementById("perimetro");
 
-  lados.innerHTML = `${ladoCuadrado(lado)} cm`;
-  area.innerHTML = `${areaCuadrado(lado)} cm`;
-  perimetro.innerHTML = `${perimetroCuadrado(lado)} cm`;
+  lados.innerHTML = `${ladoCuadrado(lado)}cm`;
+  area.innerHTML = `${areaCuadrado(lado)}cm`;
+  perimetro.innerHTML = `${perimetroCuadrado(lado)}cm`;
 };
 
 // Calculos Triangulos
@@ -47,21 +47,21 @@ const calcularTriangulo = () => {
   const perimetroTriangulo = document.getElementById("perimetroTriangulo");
   const areaTriangulo = document.getElementById("areaTriangulo");
 
-  ladosTriangulo.innerHTML = `${ladoLeft} ${ladoRight} ${ladoBase}`;
+  ladosTriangulo.innerHTML = `Lado derecho ${ladoLeft}, izquierdo ${ladoRight} y la base de: ${ladoBase}`;
   alturaTriangulo.innerHTML = `${cAlturaTriangulo(
     ladoLeft,
     ladoRight,
     ladoBase
-  )} cm`;
+  )}cm`;
   perimetroTriangulo.innerHTML = `${cPerimetroTriangulo(
     ladoLeft,
     ladoRight,
     ladoBase
-  )} cm`;
+  )}cm`;
   areaTriangulo.innerHTML = `${areaTringulo(
     ladoBase,
     cAlturaTriangulo(ladoLeft, ladoRight, ladoBase)
-  )} cm`;
+  )}cm`;
 };
 
 const cRadioCirculo = (diametro) => diametro/2;
