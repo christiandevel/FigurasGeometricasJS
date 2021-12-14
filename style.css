@@ -1,75 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: "Gloria Hallelujah", cursive;
-	padding: 5% 2%;
-	font-size: 16px;
-	background: rgb(2, 0, 36);
-	background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%,rgba(121, 9, 58, 1) 35%,rgba(0, 212, 255, 1) 100%);
-	color: white;
+  font-family: "Gloria Hallelujah", cursive;
+  padding: 5% 2%;
+  font-size: 16px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(121, 9, 58, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
 }
 
 main {
-	width: 100%;
-	text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
-.figuras{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 4%;
+.figuras {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
 }
 
-.figura_container{
-	margin-top: 5%;
-	width: 30%;
-	text-align: center;
-	-webkit-box-shadow: 11px 11px 10px -5px rgba(0, 0, 0, 0.53);
+.figura_container {
+  margin-top: 5%;
+  width: 30%;
+  text-align: center;
+  -webkit-box-shadow: 11px 11px 10px -5px rgba(0, 0, 0, 0.53);
   box-shadow: 11px 11px 10px -5px rgba(0, 0, 0, 0.53);
-	padding: 0 2%;
+  padding: 0 2%;
 }
 
 .figura_container img {
-	width: 70%;
-	object-fit: contain;
+  width: 70%;
+  object-fit: contain;
 }
 
 .descripcion {
-	font-size: 12px;
+  font-size: 12px;
 }
 
 .title {
-	margin-top: 3%;
-	font-weight: bold;
-	font-size: 22px;
+  margin-top: 3%;
+  font-weight: bold;
+  font-size: 22px;
 }
 
 label {
-	display: block;
-	font-size: 14px;
+  display: block;
+  font-size: 14px;
 }
 
 input {
-	border: none;
-	outline: none;
-	padding: 4px;
+  border: none;
+  outline: none;
+  padding: 4px;
 }
 
 button {
-	width: 90%;
-	padding: 8px;
-	margin-top: 5%;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	background: rgb(2, 0, 36);
+  width: 90%;
+  padding: 8px;
+  margin-top: 5%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
@@ -77,25 +82,25 @@ button {
     rgba(0, 212, 255, 1) 100%
   );
   border-radius: 10px;
-	color: white;
-	font-weight: bold;
-	font-size: 22px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
 }
 
-.results{
-	border: 1px solid white;
-	margin: 5% auto;
+.results {
+  border: 1px solid white;
+  margin: 5% auto;
 }
 
 .title_media {
-	display: block;
-	width: 100%;
-	font-size: 14px;
+  display: block;
+  width: 100%;
+  font-size: 14px;
 }
 
 .valor_medida {
-	font-weight: bold;
-	font-size: 18px;
-	text-decoration: underline;
-	letter-spacing: 2%;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: underline;
+  letter-spacing: 2%;
 }

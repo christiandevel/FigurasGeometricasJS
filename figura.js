@@ -37,7 +37,6 @@ const cPerimetroTriangulo = (lado1, lado2, base) => {
 
 const areaTringulo = (base, altura) => (base * altura) / 2;
 const calcularTriangulo = () => {
-
   const ladoLeft = document.getElementById("ladoLeft").value;
   const ladoRight = document.getElementById("ladoRight").value;
   const ladoBase = document.getElementById("ladoBase").value;
@@ -64,29 +63,24 @@ const calcularTriangulo = () => {
   )}cm`;
 };
 
-const cRadioCirculo = (diametro) => diametro/2;
+const cRadioCirculo = (diametro) => diametro / 2;
 const diametroCirculo = (radio) => radio * 2;
-const cPerimetroCirculo = (diametro, PI) => diametro*PI;
+const cPerimetroCirculo = (diametro, PI) => diametro * PI;
 const cAreaCirculo = (radio, PI) => radio * radio * PI;
 
 const calculosCirculo = () => {
-	const PI = Math.PI;
-	const diametro = document.getElementById("diametro").value;
-	
-	const diametroCirculo = document.getElementById("diametroCirculo");
-	const valorPI = document.getElementById("valorPI");
-	const radioCirculo = document.getElementById("radioCirculo");
-	const perimetroCirculo = document.getElementById("perimetroCirculo");
-	const areaCirculo = document.getElementById("areaCirculo");
-	
-	
-	diametroCirculo.innerHTML = `${diametro}`;
-	valorPI.innerHTML = `${PI}`;
-	radioCirculo.innerHTML = `${cRadioCirculo(diametro)}`;
-	perimetroCirculo.innerHTML = `${cPerimetroCirculo(diametro, PI)}`;
-	areaCirculo.innerHTML = `${cAreaCirculo(cRadioCirculo(diametro), PI)}`;
-}
+  const PI = Math.PI;
+  const diametro = document.getElementById("diametro").value;
 
+  const diametroCirculo = document.getElementById("diametroCirculo");
+  const valorPI = document.getElementById("valorPI");
+  const radioCirculo = document.getElementById("radioCirculo");
+  const perimetroCirculo = document.getElementById("perimetroCirculo");
+  const areaCirculo = document.getElementById("areaCirculo");
 
-
-
+  diametroCirculo.innerHTML = `${diametro}`;
+  valorPI.innerHTML = `${PI}`;
+  radioCirculo.innerHTML = `${cRadioCirculo(diametro)}`;
+  perimetroCirculo.innerHTML = `${cPerimetroCirculo(diametro, PI)}`;
+  areaCirculo.innerHTML = `${cAreaCirculo(cRadioCirculo(diametro), PI)}`;
+};
